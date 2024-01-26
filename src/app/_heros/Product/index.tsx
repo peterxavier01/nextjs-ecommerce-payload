@@ -5,7 +5,6 @@ import { Product } from '../../../payload/payload-types'
 import { AddToCartButton } from '../../_components/AddToCartButton'
 import { Gutter } from '../../_components/Gutter'
 import { Media } from '../../_components/Media'
-import { Message } from '../../_components/Message'
 import { Price } from '../../_components/Price'
 import RichText from '../../_components/RichText'
 
@@ -24,24 +23,6 @@ export const ProductHero: React.FC<{
 
   return (
     <Fragment>
-      {!stripeProductID && (
-        <Gutter>
-          <Message
-            className={classes.warning}
-            warning={
-              <Fragment>
-                {'This product is not yet connected to Stripe. To link this product, '}
-                <Link
-                  href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}
-                >
-                  edit this product in the admin panel
-                </Link>
-                {'.'}
-              </Fragment>
-            }
-          />
-        </Gutter>
-      )}
       <Gutter className={classes.productHero}>
         <div className={classes.content}>
           <div className={classes.categories}>
