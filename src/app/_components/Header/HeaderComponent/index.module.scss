@@ -1,0 +1,26 @@
+.header {
+    padding: 36px 0;
+    background-color: var(--color-base-0);
+    transition: all 0.3 ease;
+}
+
+.scrolled {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-base-0);
+    z-index: 999;
+    padding: 25px 0;
+}
+
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: calc(var(--base)/ 2) var(--base);
+}
+
+.hide {
+    display: none;
+}
